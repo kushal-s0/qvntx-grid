@@ -3,7 +3,7 @@
 **Live Vercel URL:** 
 **YouTube Demo Video URL:** https://youtu.be/gzYD01aZ0vY  
 
-**Deployment guide:** [Deploy with Vercel + Render](DEPLOYMENT.md)
+**Deployed URL:** https://qvntx-grid.vercel.app/
 
 **Recorded walkthrough (local files, excluded from Git):** `deliverables/qvntx-grid-walkthrough.mp4` and `deliverables/walkthrough-captions.srt`. Upload the video separately and add its public URL above.
 
