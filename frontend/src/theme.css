@@ -1,0 +1,231 @@
+/* Shared tokens also drive Recharts SVG attributes and tooltip surfaces. */
+:root {
+  --page: #f9fafd;
+  --panel: #fff;
+  --panel-soft: #eff2fa;
+  --accent: #3d52a0;
+  --chart-text: #626e8c;
+  --chart-forecast: #3d52a0;
+  --chart-actual: #7091e6;
+  --chart-grid: #e5eaf5;
+  --chart-reference: #adbbda;
+  --chart-band: #8697c4;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 7px;
+  min-height: 32px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--accent);
+  background: var(--surface);
+  font-size: 10px;
+}
+.theme-toggle:hover {
+  border-color: var(--slate);
+  transform: translateY(-1px);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0e1425;
+  --panel: #151f34;
+  --panel-soft: #1a2640;
+  --surface: #121b2e;
+  --ink: #ede8f5;
+  --muted: #a3b0cf;
+  --line: #2a3856;
+  --accent: #adbbff;
+  --slate: #a1b3dd;
+  --lavender: #253354;
+  --chart-text: #a3b0cf;
+  --chart-forecast: #adbbff;
+  --chart-actual: #7091e6;
+  --chart-grid: #2a3856;
+  --chart-reference: #677da9;
+  --chart-band: #8697c4;
+}
+
+html[data-theme="dark"] .sidebar {
+  background: #111b2ee8;
+  border-color: var(--line);
+  box-shadow: 0 5px 35px #00000020;
+}
+html[data-theme="dark"] .hero::before {
+  background:
+    radial-gradient(ellipse at 80% 45%, #3d52a044, transparent 48%),
+    linear-gradient(130deg, #0e1425 12%, #25213b80);
+}
+html[data-theme="dark"] .brand-light,
+html[data-theme="dark"] .hero-edition,
+html[data-theme="dark"] .hero-proof p > span,
+html[data-theme="dark"] .scene-caption,
+html[data-theme="dark"] .scene-bottom,
+html[data-theme="dark"] .scene-bottom > button,
+html[data-theme="dark"] .vintage-card div > span,
+html[data-theme="dark"] .filters label,
+html[data-theme="dark"] .thermal-result > span,
+html[data-theme="dark"] .thermal-result small,
+html[data-theme="dark"] .period {
+  color: var(--muted);
+}
+html[data-theme="dark"] .button.secondary,
+html[data-theme="dark"] .scene-data-card,
+html[data-theme="dark"] .scene-bottom > button,
+html[data-theme="dark"] .confidence-options button.selected {
+  background: var(--panel);
+  border-color: var(--line);
+}
+html[data-theme="dark"] .button.secondary:hover,
+html[data-theme="dark"] .sidebar nav button:hover,
+html[data-theme="dark"] .confidence-options,
+html[data-theme="dark"] .workspace-tabs button > span,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .sim-heading > .pill {
+  background: var(--panel-soft);
+  border-color: var(--line);
+}
+html[data-theme="dark"] .sidebar nav button.active {
+  background: var(--cobalt);
+  color: #fff;
+}
+html[data-theme="dark"] .proof-mark,
+html[data-theme="dark"] .scene-card-icon,
+html[data-theme="dark"] .sim-icon,
+html[data-theme="dark"] .insight-icon {
+  background: #25365b;
+  border-color: #354a74;
+}
+html[data-theme="dark"] .hero-bottom-line,
+html[data-theme="dark"] .hero-bottom-line > a,
+html[data-theme="dark"] .scene-bottom > button,
+html[data-theme="dark"] .workspace-tabs,
+html[data-theme="dark"] .filters,
+html[data-theme="dark"] .date-filter,
+html[data-theme="dark"] .cutoff-filter,
+html[data-theme="dark"] .gate-filter,
+html[data-theme="dark"] .refresh-button,
+html[data-theme="dark"] .chart-footer,
+html[data-theme="dark"] .confidence-options,
+html[data-theme="dark"] .thermal-result,
+html[data-theme="dark"] .insight-row,
+html[data-theme="dark"] th,
+html[data-theme="dark"] td,
+html[data-theme="dark"] .pagination button,
+html[data-theme="dark"] .risk-legend,
+html[data-theme="dark"] .risk-explainer,
+html[data-theme="dark"] .modal-close,
+html[data-theme="dark"] .interp {
+  border-color: var(--line);
+}
+html[data-theme="dark"] .simulator {
+  background: linear-gradient(145deg, #1c2946, #211f37);
+  border-color: var(--line);
+}
+html[data-theme="dark"] .insight-row,
+html[data-theme="dark"] .risk-explainer {
+  background: var(--panel-soft);
+}
+html[data-theme="dark"] .filters select option {
+  background: var(--panel);
+  color: var(--ink);
+}
+html[data-theme="dark"] input[type="range"] {
+  background: linear-gradient(
+    to right,
+    var(--accent) var(--range-progress),
+    #334362 var(--range-progress)
+  );
+}
+html[data-theme="dark"] .text-green {
+  color: #8db1f4 !important;
+}
+html[data-theme="dark"] .text-amber {
+  color: #c2caff !important;
+}
+html[data-theme="dark"] .dot-green {
+  background: var(--chart-actual);
+}
+html[data-theme="dark"] .dot-amber {
+  background: var(--chart-forecast);
+}
+html[data-theme="dark"] .scene-block {
+  filter: drop-shadow(9px 20px 15px #00000024);
+}
+html[data-theme="dark"] .block-front {
+  background: linear-gradient(115deg, #4d618d, #2d3c62);
+  border-color: #8ba5e32b;
+}
+html[data-theme="dark"] .block-top {
+  background: linear-gradient(135deg, #8a9dc8, #4e6597);
+  border-color: #adbbda44;
+}
+html[data-theme="dark"] .block-side {
+  background: linear-gradient(90deg, #203258, #384c77);
+}
+html[data-theme="dark"] .block-0 .block-front,
+html[data-theme="dark"] .block-4 .block-front {
+  background: linear-gradient(110deg, #7182af, #434665);
+}
+html[data-theme="dark"] .block-2 .block-front {
+  background: linear-gradient(110deg, #7091e6, #3d52a0);
+}
+html[data-theme="dark"] .block-2 .block-top {
+  background: linear-gradient(120deg, #adbbff, #7091e6);
+}
+html[data-theme="dark"] .block-2 .block-side {
+  background: linear-gradient(90deg, #31498d, #647bc0);
+}
+html[data-theme="dark"] .scene-mini-bars i {
+  border-color: #7e99d2;
+  box-shadow: 5px -4px 0 #435b8c;
+}
+html[data-theme="dark"] .modal {
+  border-color: var(--line);
+  box-shadow: 0 25px 100px #00000060;
+}
+html[data-theme="dark"] .modal-backdrop {
+  background: #050916a8;
+}
+html[data-theme="dark"] .error-banner {
+  background: #28223e;
+  border-color: #51426d;
+  color: #d4c7ed;
+}
+html[data-theme="dark"] .error-banner strong {
+  color: #ede0ff;
+}
+html[data-theme="dark"] .error-banner button {
+  border-color: #77628e;
+}
+html[data-theme="dark"] .skeleton {
+  border-color: var(--line);
+  background-image: linear-gradient(
+    110deg,
+    #17223a 30%,
+    #253354 45%,
+    #17223a 60%
+  );
+}
+html[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--page);
+}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #3b4c72;
+}
+
+@media (max-width: 960px) {
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+  }
+  .theme-toggle > span {
+    display: none;
+  }
+}
