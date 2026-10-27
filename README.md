@@ -1,11 +1,14 @@
 # qvntx-grid
 
-**Live Vercel URL:** 
-**YouTube Demo Video URL:** https://youtu.be/gzYD01aZ0vY  
+**Live Vercel URL:** [qvntx-grid.vercel.app](https://qvntx-grid.vercel.app/)
 
-**Deployed URL:** https://qvntx-grid.vercel.app/
+**Backend API:** [qvntx-grid-api.onrender.com](https://qvntx-grid-api.onrender.com/)
 
-**Recorded walkthrough (local files, excluded from Git):** `deliverables/qvntx-grid-walkthrough.mp4` and `deliverables/walkthrough-captions.srt`. Upload the video separately and add its public URL above.
+**API documentation:** [Swagger UI](https://qvntx-grid-api.onrender.com/docs) · [Health check](https://qvntx-grid-api.onrender.com/api/health)
+
+**YouTube Demo Video URL:** [Watch the demo](https://youtu.be/gzYD01aZ0vY)
+
+**Recorded walkthrough (local files, excluded from Git):** `deliverables/qvntx-grid-walkthrough.mp4` and `deliverables/walkthrough-captions.srt`. The published demo is linked above.
 
 A read-only GB electricity procurement and forecast risk workspace for January 2026. React, FastAPI, and the public Elexon Insights API. Includes a verified real-data cache; no API key or synthetic data is required.
 
@@ -140,7 +143,7 @@ This architecture keeps Python/Pandas on Render and deploys Vite assets to Verce
 
 1. Commit the repository, **including** `backend/data/elexon_jan2026_cache.json` and `frontend/package-lock.json`.
 2. In Render, create a Blueprint from `render.yaml`, or create a Docker web service using the repository root as build context and `backend/Dockerfile` as the Dockerfile. Render supplies `PORT`; the image respects it. Health check: `/api/health`.
-3. Record the backend origin, for example `https://qvntx-grid-api.onrender.com` (replace with the real assigned hostname).
+3. Use the deployed backend origin: `https://qvntx-grid-api.onrender.com`.
 4. Import the repository root into Vercel and select Node.js 22.x in project settings. `vercel.json` installs/builds the frontend and publishes `frontend/dist`.
 5. Set the Vercel **build-time** environment variable `VITE_API_BASE_URL` to the Render backend origin **without** `/api`. Redeploy after changing it.
 6. Set Render's `CORS_ORIGINS` to the actual Vercel production origin (comma-separated if including preview/local origins, no trailing slash), and restart/redeploy the backend.
